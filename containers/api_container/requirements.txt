@@ -7,6 +7,8 @@ Keras == 2.4.3
 # captcha/.ipynb_checkpoints/app-checkpoint.py: 1
 # captcha/app.py: 1
 connexion == 2.7.0
+protobuf == 3.20.0
+openapi-spec-validator == 0.2.10
 
 # captcha/.ipynb_checkpoints/test_app-checkpoint.ipynb: 6
 # captcha/test_app.ipynb: 6

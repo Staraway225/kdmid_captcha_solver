@@ -34,14 +34,14 @@ def train_model(letters_path, save_path):
     (X_train, X_test, Y_train, Y_test) = train_test_split(data, labels, test_size=0.25, random_state=0)
 
     nn = NN.build(alphabet_size)
-    nn.fit(X_train, X_test, Y_train, Y_test)
+    nn.fit(X_train, X_test, Y_train, Y_test, epochs=50)
     return nn
-    
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("train_set_location", help='Location with stored labelled captcha', type=str)
-    parser.add_argument("-s", "--save-path", help='Path to save trained model', type=str, 
+    parser.add_argument("-s", "--save-path", help='Path to save trained model', type=str,
                         default='trained_model', nargs='?', required=False)
     args = parser.parse_args()
     markup_files = [os.path.join(args.train_set_location, x) for x in os.listdir(args.train_set_location)]

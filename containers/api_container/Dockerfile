@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
-RUN apt-get -y install libgl1-mesa-glx python3.7 python3-pip
+RUN apt-get -y install libgl1-mesa-glx python3.7 python3.7-distutils python3-pip
 
 COPY requirements.txt .
 RUN python3.7 -m pip install -r requirements.txt
